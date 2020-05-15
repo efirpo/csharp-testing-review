@@ -14,7 +14,7 @@ namespace WordCounter.Models
     }
     public static void GetSentence(string input)
     {
-      Sentence = input.ToLower();
+      Sentence = input;
     }
     public static bool CheckWord()
     {
@@ -65,7 +65,7 @@ namespace WordCounter.Models
       {
         check = false;
       }
-      if (Sentence[0] == Char.ToLower(Sentence[0]))
+      if ((Sentence[0]).ToString() == (Char.ToLower(Sentence[0]).ToString()))
       {
         check = false;
       }
@@ -78,6 +78,7 @@ namespace WordCounter.Models
     }
     public static int CountSentence()
     {
+      Sentence.ToLower();
       int wordCount = 0;
       char[] charSplit = { '.', ',', '?', '!', '\"', '\'', ':', ';', '/', '(', ')', '-', ' ' };
       string[] sentenceArray = Sentence.Split(charSplit);

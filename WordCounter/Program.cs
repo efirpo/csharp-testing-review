@@ -34,30 +34,39 @@ namespace WordApp
         }
         else
         {
+        GetSentenceInput:
           Console.WriteLine("\nPlease enter a sentence to check the word against:\n");
           WordCounterApp.GetSentence(Console.ReadLine());
-          int wordCount = WordCounterApp.CountSentence();
-          Console.WriteLine("\nYour sentence contains the word \"" + WordCounterApp.Word + "\" " + wordCount + " times. Wow!\n");
-          Console.WriteLine("Would you like to try again? [ Y / N ]\n");
-          string tryAgain = Console.ReadLine().ToLower();
-          if (tryAgain == "y")
+          bool checkSentence = WordCounterApp.CheckSentence();
+          if (checkSentence == false)
           {
-            goto GetWordInput;
+            Console.WriteLine("\nIt seems like you didn't enter a proper sentence. Please check your punctuation, capitalization, and spelling.");
+            goto GetSentenceInput;
           }
-          else if (tryAgain == "n")
+          else
           {
-            Console.WriteLine("\nThank you for trying out our next-level program.\n");
-            Console.WriteLine("                        _ _                _ ");
-            Console.WriteLine("                       | | |              | |");
-            Console.WriteLine("   __ _  ___   ___   __| | |__  _   _  ___| |");
-            Console.WriteLine("  / _` |/ _ \\ / _ \\ / _` | '_ \\| | | |/ _ \\ |");
-            Console.WriteLine(" | (_| | (_) | (_) | (_| | |_) | |_| |  __/_|");
-            Console.WriteLine("  \\__, |\\___/ \\___/ \\__,_|_.__/ \\__, |\\___(_)");
-            Console.WriteLine("   __/ |                         __/ |");
-            Console.WriteLine("  |___/                         |___/ \n");
+            int wordCount = WordCounterApp.CountSentence();
+            Console.WriteLine("\nYour sentence contains the word \"" + WordCounterApp.Word + "\" " + wordCount + " times. Wow!\n");
+            Console.WriteLine("Would you like to try again? [ Y / N ]\n");
+            string tryAgain = Console.ReadLine().ToLower();
+            if (tryAgain == "y")
+            {
+              goto GetWordInput;
+            }
+            else if (tryAgain == "n")
+            {
+              Console.WriteLine("\nThank you for trying out our next-level program.\n");
+              Console.WriteLine("                        _ _                _ ");
+              Console.WriteLine("                       | | |              | |");
+              Console.WriteLine("   __ _  ___   ___   __| | |__  _   _  ___| |");
+              Console.WriteLine("  / _` |/ _ \\ / _ \\ / _` | '_ \\| | | |/ _ \\ |");
+              Console.WriteLine(" | (_| | (_) | (_) | (_| | |_) | |_| |  __/_|");
+              Console.WriteLine("  \\__, |\\___/ \\___/ \\__,_|_.__/ \\__, |\\___(_)");
+              Console.WriteLine("   __/ |                         __/ |");
+              Console.WriteLine("  |___/                         |___/ \n");
+            }
           }
         }
-
       }
       else if (tryInput == "n")
       {
