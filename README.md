@@ -8,11 +8,12 @@ This program will allow a user to enter a word, then enter a sentence and see ho
 
 ## Setup
 
-Clone this Repository. 
-Make Sure You Have .Net Installed on Your Machine. 
-Open The Folder in Your Text Editor. 
-Build in Console with Dotnet Build. 
-Run in Console with Dotnet Run. 
+Clone this Repository.  
+OR visit https://github.com/efirpo/csharp-testing-review/ to download.  
+Make Sure You Have .Net Installed on Your Machine.  
+Open The Folder in Your Text Editor.  
+Build in Console with Dotnet Build.  
+Run in Console with Dotnet Run.  
 
 ## Technology
 
