@@ -37,6 +37,16 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(false, WordCounterApp.CheckWord());
     }
+    [TestMethod]
+    public void Word_CheckIfWordContainsNoNonAlphabeticalCharacters_False()
+    {
+      // Act
+      WordCounterApp word = new WordCounterApp();
+      // Arrange
+      WordCounterApp.GetWord("chu!k");
+      // Assert
+      Assert.AreEqual(false, WordCounterApp.CheckWord());
+    }
     public void Sentence_CheckHowManyTimesWordAppearsInSentence_Two()
     {
       // Act
