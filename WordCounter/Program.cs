@@ -18,7 +18,7 @@ namespace WordApp
       Console.WriteLine("     \\/  \\/ \\___/|_|  \\__,_|  \\_____\\___/ \\__,_|_| |_|\\__\\___|_|    /_/    \\_\\ .__/| .__/ ");
       Console.WriteLine("                                                                             | |   | |");
       Console.WriteLine("                                                                             |_|   |_| ");
-      Console.WriteLine("\nHere at Word Counter App we believe in high-level design and functionality adapted to our fast paced modern world.\n\nWould you like to check a sentence to see how many times a certain word appears in it? [ Y / N ]");
+      Console.WriteLine("\nHere at Word Counter App we believe in high-level design and agile functionality adapted to our fast-paced modern world.\n\nWould you like to check a sentence to see how many times a certain word appears in it? [ Y / N ]\n");
       string tryInput = Console.ReadLine().ToLower();
       if (tryInput == "y")
       {
@@ -29,7 +29,7 @@ namespace WordApp
         bool checkWord = WordCounterApp.CheckWord();
         if (checkWord == false)
         {
-          Console.WriteLine("\nYou must have typoed. Please enter a word that contains only alphabetical characters.");
+          Console.WriteLine("\nYou must have typoed. Please enter a single word that contains only alphabetical characters.");
           goto GetWordInput;
         }
         else
@@ -61,7 +61,7 @@ namespace WordApp
       }
       else if (tryInput == "n")
       {
-        Console.WriteLine("\nWe understand. Not everyone can grasp the insane level\nof functionality we actualize here at Word Counter App. \nPlease come back another time if you find yourself \nready to get your mind blown.\n");
+        Console.WriteLine("\nWe understand. Not everyone can handle the insane actualization of compatibility-oriented utility here at Word Counter App.\n \nPlease come back another time if you find yourself ready to get your mind blown.\n");
         Console.WriteLine("                        _ _                _ ");
         Console.WriteLine("                       | | |              | |");
         Console.WriteLine("   __ _  ___   ___   __| | |__  _   _  ___| |");
