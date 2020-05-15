@@ -8,7 +8,7 @@ This program will allow a user to enter a word, then enter a sentence and see ho
 
 ## Setup
 
-Clone this Repositorry. 
+Clone this Repository. 
 Make Sure You Have .Net Installed on Your Machine. 
 Open The Folder in Your Text Editor. 
 Build in Console with Dotnet Build. 
@@ -26,8 +26,7 @@ Run in Console with Dotnet Run.
 |Program will accept a word from the user|"chuck"|true|
 |Program will accept a sentence from the user|"how much wood would a woodchuck chuck if a woodchuck could chuck wood?"|true|
 |Program will check if word contains numbers|"ch4ck"|false|
-|Program will check if word contains special characters|"ch!ck"|false|
-|Program will remove commas, quotes, and other applicable special characters from string|"chuck,"|"chuck"|
+|Program will check if word contains special characters|"ch*ck"|false|
 |Program will count how many times word appears in the sentence|"chuck", "how much wood would a woodchuck chuck if a woodchuck could chuck wood?"|2|
 
 
