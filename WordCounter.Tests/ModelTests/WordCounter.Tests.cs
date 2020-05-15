@@ -37,6 +37,16 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(false, WordCounterApp.CheckWord());
     }
+    public void Sentence_CheckHowManyTimesWordAppearsInSentence_Two()
+    {
+      // Act
+      WordCounterApp word = new WordCounterApp();
+      // Arrange
+      WordCounterApp.GetWord("chuck");
+      // Assert
+      Assert.AreEqual(2, WordCounterApp.CheckSentence());
+
+    }
 
   }
 }
