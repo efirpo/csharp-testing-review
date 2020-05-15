@@ -25,10 +25,11 @@ Run in Console with Dotnet Run.
 |Behavior|Input|Output|
 |-----|-----|-----|
 |Program will accept a word from the user|"chuck"|true|
-|Program will accept a sentence from the user|"how much wood would a woodchuck chuck if a woodchuck could chuck wood?"|true|
+|Program will accept a sentence from the user|"How much wood would a woodchuck chuck if a woodchuck could chuck wood?"|true|
 |Program will check if word contains numbers|"ch4ck"|false|
 |Program will check if word contains special characters|"ch*ck"|false|
-|Program will count how many times word appears in the sentence|"chuck", "how much wood would a woodchuck chuck if a woodchuck could chuck wood?"|2|
+|Program will check if sentence does not have capitalization, punctuation, or if words within contain inapplicable special characters|"how much wood would a woodchuck chuck if a woodchuck could chuck wood"|false|
+|Program will count how many times word appears in the sentence|"chuck", "How much wood would a woodchuck chuck if a woodchuck could chuck wood?"|2|
 
 
 ## Legal

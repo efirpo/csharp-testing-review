@@ -36,7 +36,7 @@ namespace WordApp
         {
           Console.WriteLine("\nPlease enter a sentence to check the word against:\n");
           WordCounterApp.GetSentence(Console.ReadLine());
-          int wordCount = WordCounterApp.CheckSentence();
+          int wordCount = WordCounterApp.CountSentence();
           Console.WriteLine("\nYour sentence contains the word \"" + WordCounterApp.Word + "\" " + wordCount + " times. Wow!\n");
           Console.WriteLine("Would you like to try again? [ Y / N ]\n");
           string tryAgain = Console.ReadLine().ToLower();

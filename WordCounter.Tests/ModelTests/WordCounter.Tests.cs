@@ -50,17 +50,28 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(false, WordCounterApp.CheckWord());
     }
+    [TestMethod]
+
+    public void Sentence_CheckIfSentenceDoesNotHaveMostlyProperGrammarAndWordsOnlyContainingAlphabeticalCharacters_False()
+    {
+      // Arrange
+      WordCounterApp word = new WordCounterApp();
+      // Act
+      WordCounterApp.GetSentence("how much wood would a wood-chuck chuck if a wood-chuck could chuck wood?");
+      // Assert
+      Assert.AreEqual(false, WordCounterApp.CheckSentence());
+    }
 
     [TestMethod]
     public void Sentence_CheckHowManyTimesWordAppearsInSentence_Two()
     {
-      // Act
-      WordCounterApp word = new WordCounterApp();
       // Arrange
+      WordCounterApp word = new WordCounterApp();
+      // Act
       WordCounterApp.GetWord("chuck");
       WordCounterApp.GetSentence("How much wood would a woodchuck chuck, if a woodchuck could chuck wood?");
       // Assert
-      Assert.AreEqual(2, WordCounterApp.CheckSentence());
+      Assert.AreEqual(2, WordCounterApp.CountSentence());
 
     }
 
