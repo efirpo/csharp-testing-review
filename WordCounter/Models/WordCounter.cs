@@ -65,11 +65,15 @@ namespace WordCounter.Models
       {
         check = false;
       }
-      if ((Sentence[0]).ToString() == (Char.ToLower(Sentence[0]).ToString()))
+      else if (Sentence[0].ToString() == (Char.ToLower(Sentence[0]).ToString()))
       {
         check = false;
       }
-      else if (Sentence[Sentence.Length - 1] != '.' || Sentence[Sentence.Length - 1] != '!' || Sentence[Sentence.Length - 1] != '?')
+      else if (Sentence[Sentence.Length - 1] == '.' || Sentence[Sentence.Length - 1] == '!' || Sentence[Sentence.Length - 1] == '?')
+      {
+        check = true;
+      }
+      else
       {
         check = false;
       }

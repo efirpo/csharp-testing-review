@@ -37,10 +37,12 @@ namespace WordApp
         GetSentenceInput:
           Console.WriteLine("\nPlease enter a sentence to check the word against:\n");
           WordCounterApp.GetSentence(Console.ReadLine());
+          Console.WriteLine(WordCounterApp.Sentence[0]);
+          Console.WriteLine(Char.ToLower(WordCounterApp.Sentence[0]));
           bool checkSentence = WordCounterApp.CheckSentence();
           if (checkSentence == false)
           {
-            Console.WriteLine("\nIt seems like you didn't enter a proper sentence. Please check your punctuation, capitalization, and spelling.");
+            Console.WriteLine("\nIt seems like you didn't enter a proper sentence. Please check your punctuation, capitalization, and spelling, and make sure you're entering an actual sentence.\n");
             goto GetSentenceInput;
           }
           else
