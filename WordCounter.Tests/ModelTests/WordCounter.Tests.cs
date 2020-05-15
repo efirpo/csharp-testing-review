@@ -43,6 +43,7 @@ namespace WordCounter.Tests
       WordCounterApp word = new WordCounterApp();
       // Arrange
       WordCounterApp.GetWord("chuck");
+      WordCounterApp.GetSentence("How much wood would a woodchuck chuck, if a woodchuck could chuck wood?");
       // Assert
       Assert.AreEqual(2, WordCounterApp.CheckSentence());
 
