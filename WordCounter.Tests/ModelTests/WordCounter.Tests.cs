@@ -52,12 +52,34 @@ namespace WordCounter.Tests
     }
     [TestMethod]
 
-    public void Sentence_CheckIfSentenceDoesNotHaveMostlyProperGrammarAndWordsOnlyContainingAlphabeticalCharacters_False()
+    public void Sentence_CheckIfSentenceDoesStartWithCapitalLetter_False()
     {
       // Arrange
       WordCounterApp word = new WordCounterApp();
       // Act
-      WordCounterApp.GetSentence("how much wood would a wood-chuck chuck if a wood-chuck could chuck wood?");
+      WordCounterApp.GetSentence("how much wood would a woodchuck chuck if a woodchuck could chuck wood?");
+      // Assert
+      Assert.AreEqual(false, WordCounterApp.CheckSentence());
+    }
+
+    [TestMethod]
+    public void Sentence_CheckIfSentenceDoesNotEndInSentenceTerminatorCharacter_False()
+    {
+      // Arrange
+      WordCounterApp word = new WordCounterApp();
+      // Act
+      WordCounterApp.GetSentence("How much wood would a woodchuck chuck if a woodchuck could chuck wood");
+      // Assert
+      Assert.AreEqual(false, WordCounterApp.CheckSentence());
+    }
+
+    [TestMethod]
+    public void Sentence_CheckIfWordsInSentenceContainSpecialCharactersOrNumbers_False()
+    {
+      // Arrange
+      WordCounterApp word = new WordCounterApp();
+      // Act
+      WordCounterApp.GetSentence("How much wo!d would a woodchuck chuck if a woodchuck could chuck wood?");
       // Assert
       Assert.AreEqual(false, WordCounterApp.CheckSentence());
     }
