@@ -44,6 +44,19 @@ namespace WordCounter.Models
       string[] charCheck = { "~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", "\\", "|", ":", ";", "\"", "\'", "<", ",", ">", ".", "?", "/", " " };
       char[] charSplit = { '.', ',', '?', '!', '\"', '\'', ':', ';', '/', '(', ')', '-', ' ' };
       string[] sentenceArray = Sentence.Split(charSplit);
+
+      if (sentenceArray.Length == 1)
+      {
+        check = false;
+      }
+      else if (Sentence[0].ToString() == (Char.ToLower(Sentence[0]).ToString()))
+      {
+        check = false;
+      }
+      else if (Sentence[Sentence.Length - 1] != '.' || Sentence[Sentence.Length - 1] != '!' || Sentence[Sentence.Length - 1] != '?')
+      {
+        check = false;
+      }
       foreach (string word in sentenceArray)
       {
         for (int i = 0; i < charCheck.Length; i++)
@@ -60,22 +73,6 @@ namespace WordCounter.Models
             check = false;
           }
         }
-      }
-      if (sentenceArray.Length == 1)
-      {
-        check = false;
-      }
-      else if (Sentence[0].ToString() == (Char.ToLower(Sentence[0]).ToString()))
-      {
-        check = false;
-      }
-      else if (Sentence[Sentence.Length - 1] == '.' || Sentence[Sentence.Length - 1] == '!' || Sentence[Sentence.Length - 1] == '?')
-      {
-        check = true;
-      }
-      else
-      {
-        check = false;
       }
 
       return check;

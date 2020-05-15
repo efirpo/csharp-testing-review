@@ -79,7 +79,7 @@ namespace WordCounter.Tests
       // Arrange
       WordCounterApp word = new WordCounterApp();
       // Act
-      WordCounterApp.GetSentence("How much wo!d would a woodchuck chuck if a woodchuck could chuck wood?");
+      WordCounterApp.GetSentence("How much wo0d would a woodchuck chuck if a woodchuck could chuck wood?");
       // Assert
       Assert.AreEqual(false, WordCounterApp.CheckSentence());
     }
