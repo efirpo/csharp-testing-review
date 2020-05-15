@@ -27,6 +27,16 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(typeof(string), WordCounterApp.Sentence.GetType());
     }
+    [TestMethod]
+    public void Word_CheckIfWordContainsNoNumbers_False()
+    {
+      // Act
+      WordCounterApp word = new WordCounterApp();
+      // Arrange
+      WordCounterApp.GetWord("ch9ck");
+      // Assert
+      Assert.AreEqual(false, WordCounterApp.CheckWord());
+    }
 
   }
 }
