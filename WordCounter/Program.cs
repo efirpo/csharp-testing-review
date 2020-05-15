@@ -21,7 +21,14 @@ namespace WordApp
         {
           Console.WriteLine("You must have typoed. Please enter a word that contains only alphabetical characters.");
           goto GetWordInput;
-        };
+        }
+        else
+        {
+          Console.WriteLine("Please enter a sentence to check the word against:");
+          WordCounterApp.GetSentence(Console.ReadLine());
+          int wordCount = WordCounterApp.CheckSentence();
+          Console.WriteLine("Your sentence contains the word \"" + WordCounterApp.Word + "\" " + wordCount + " times.");
+        }
 
       }
     }
